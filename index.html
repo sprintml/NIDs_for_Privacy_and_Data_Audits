@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners -->
+  <meta name="description" content="Project page for our ICLR 2026 paper Natural Identifiers for Privacy and Data Audits in Large Language Models">
+  <meta property="og:title" content="Natural Identifiers for Privacy and Data Audits in Large Language Models"/>
+  <meta property="og:description" content="Natural Identifiers for Privacy and Data Audits in Large Language Models (ICLR 2026)"/>
+  <meta property="og:image" content="static/images/canary.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- Keywords for indexing -->
+  <meta name="keywords" content="LLM, privacy, differential privacy, dataset inference, natural identifiers, generated identifiers">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div style="
+                position: relative;
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                font-family: Arial, sans-serif;
+                overflow: visible;
+            ">
+                <div style="
+                    position: relative;
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    font-size: 32px;
+                    font-weight: 900;
+                    color: black;
+                    line-height: 1.5;
+                    z-index: 20;
+                ">
+                    <span style="position: relative; display: inline-block;">
+                        N
+                        <img src="static/images/canary.png" alt="Canary" style="
+                            position: absolute;
+                            bottom: 70%;
+                            left: 70%;
+                            transform: translateX(-50%);
+                            width: 40px;
+                            pointer-events: none;
+                        ">
+                    </span>atural
+                    <img src="static/images/flower.png" alt="I" style="
+                        height: 38px;
+                        vertical-align: text-bottom;
+                        margin-right: -1px;
+                    ">dentifiers for Privacy and Data Audits in Large Language Models
+                </div>
+                <div style="
+                    position: relative;
+                    width: 100%;
+                    height: 50px;
+                    margin-top: 5px;
+                    background-image: url('static/images/grass.png');
+                    background-repeat: repeat-x;
+                    background-size: auto 100%;
+                    z-index: 10;
+                "></div>
+            </div>
+            <img src="static/images/iclr_logo.svg" alt="ICLR" style="width:40%; margin-top: 0.5rem;"/>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://tpoppo.github.io/" target="_blank">Lorenzo Rossi</a>,
+              </span>
+                <span class="author-block">
+                  <a href="https://bartlomiejmarek.github.io/" target="_blank">Bartłomiej Marek</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://franziska-boenisch.de/" target="_blank">Franziska Boenisch</a>,
+                </span>
+                <span class="author-block">
+                  <a href="https://adam-dziedzic.com/" target="_blank">Adam Dziedzic</a>,
+                </span>
+                </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">CISPA Helmholtz Center for Information Security<br></span>
+                  </div>
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://openreview.net/pdf?id=doaAUf9Pi7" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
+                        <a href="https://github.com/sprintml/natural_identifiers_for_privacy_and_data_audits_in_LLMs" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                        </a>
+                    </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <p class="subtitle has-text-justified">
+            <b>TL;DR:</b> We introduce natural identifiers (NIDs) to make post-hoc auditing practical for already-trained LLMs, enabling both <strong>Differential Privacy (DP)</strong> auditing and <strong>dataset inference</strong> without retraining.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<br>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+        <div class="content has-text-justified">
+            <h2 class="subtitle has-text-centered">
+            <b>Abstract</b><br>
+            </h2>
+          <p>
+            Assessing the privacy of large language models (LLMs) presents significant challenges. In particular, most existing methods for auditing differential privacy require the insertion of specially crafted canary data during training, making them impractical for auditing already-trained
+            models without costly retraining. Additionally, dataset inference, which audits whether a suspect dataset was used to train a model, is infeasible without access to a private non-member held-out dataset. Yet, such held-out datasets are often unavailable or difficult to construct
+            for real-world cases since they have to be from the same distribution (IID) as the suspect data. These limitations severely hinder the ability to conduct scalable, post-hoc audits. To enable such audits, this work introduces natural identifiers (NIDs) as a
+            novel solution to the above-mentioned challenges. NIDs are structured random strings, such as cryptographic hashes and shortened URLs, naturally occurring in common LLM training datasets. Their format enables the generation of unlimited additional random strings 
+            from the same distribution, which can act as alternative canaries for audits and as same-distribution held-out data for dataset inference.
+            Our evaluation highlights that indeed, using NIDs, we can facilitate post-hoc differential privacy auditing without any retraining and enable dataset inference for any suspect dataset containing NIDs without the need for a private non-member held-out dataset.
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+<br><br>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+          <p>
+            <b>Poster Location</b><br>
+            East Exhibit Hall  <br>
+          </p>
+      </div>
+    </div>
+</section>
+
+<br><br>
+
+
+
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Summary of Contributions and Findings</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            We show that <strong>post-hoc auditing</strong> of already-trained LLMs is feasible with Natural Identifiers (NIDs). The same NID-based framework supports both differential privacy auditing and dataset inference.
+          </p>
+          <ol>
+            <li>
+              <strong>Post-hoc DP auditing:</strong> NIDs act as natural canaries in existing models, enabling estimation of privacy leakage (lower bounds on \(\varepsilon\)) without retraining.
+            </li>
+            <li>
+              <strong>Post-hoc dataset inference:</strong> NIDs and generated counterparts let us audit suspect datasets without a private non-member held-out set.
+            </li>
+            <li>
+              <strong>What NIDs are:</strong> naturally occurring, high-entropy structured strings in pretraining corpora (e.g., hashes, Ethereum addresses, Java serialization identifiers).
+            </li>
+            <li>
+              <strong>What GIDs are:</strong> synthetic identifiers sampled from the same templates/distributions as NIDs; due to high entropy, they are expected to be non-members and are suitable for auditing.
+            </li>
+            <li>
+              <strong>Sharper DP bounds:</strong> increasing canary-set cardinality with NIDs/GIDs improves statistical power and tightens privacy estimates.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<br><br>
+
+
+
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How NIDs and GIDs Work</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Motivation:</strong> For <strong>post-hoc auditing</strong>, we need strings that are already in the <strong>same distribution</strong> as training data, and we need many matched <strong>non-members</strong> without retraining the model.
+          </p>
+          <p>
+            A <strong>Natural Identifier (NID)</strong> is a structured high-entropy string that naturally appears in data, such as an MD5/SHA hash, an Ethereum address, or a Java serialization identifier.
+            A <strong>Generated Identifier (GID)</strong> is a fresh string sampled from the same format.
+            Because these spaces are huge, GIDs are overwhelmingly likely to be <strong>non-members</strong> while still matching the exact format.
+          </p>
+          <p>
+            In our experiments, we focus on three canary families: <strong>hash canaries</strong> (MD5, SHA-1, SHA-256, SHA-512), <strong>blockchain canaries</strong> (Ethereum addresses), and <strong>serialization canaries</strong> (Java serialization identifiers). For each family, we generate matching GIDs with the same format constraints.
+          </p>
+          <p>
+            NIDs are <strong>pervasive</strong> in real pretraining corpora: our paper reports <strong>30,637 different NID types in Pile</strong> and <strong>23,571 in Dolma</strong> (Table 6). Even filtered or smaller slices still contain many NIDs, e.g., <strong>16,989 NIDs in RefinedWeb</strong> and <strong>293 NIDs</strong> in Pile validation+test (about <strong>0.2%</strong> of the full Pile dataset).
+          </p>
+          <p>
+            For each found NID $\hat{v}_i$, we create a candidate set with one NID and $c-1$ matched GIDs:
+          </p>
+          $$V_i = \{\hat{v}_i\} \cup \{c - 1 \text{ GIDs}\}$$
+          <p>
+            Here, $|V_i| = c$. In <strong>DP auditing</strong>, larger $c$ makes random guessing harder and improves statistical power.
+            In <strong>dataset inference</strong>, NID-vs-GID comparisons keep format/distribution fixed so the key difference is <strong>membership</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container is-max-desktop">
+  <div class="columns">
+    <div class="column" style="background-color: #f5f7fa; padding: 2rem; border-radius: .75rem; margin: 1rem;">
+      <h3 class="title is-5 has-text-centered">Example of NID</h3>
+      <hr style="border: 0; height: 2px; background: #333; margin: 1.5rem 0;">
+      <p>
+        For a future birthday party – fairy party favors. But I want to figure out a different fairy, not
+Disney...<b>34d42a69a258fa51222a2e94b4563007.jpg</b> 300×300 pixels
+A quick, easy project for the kids: playful, pom-pom covered trees.
+Carrot and Apple Cinnamon Streusel Muffins | a cup of mascarpone
+Strawberry Banana Muffins recipe
+PaperVine: Got Kids? Make your own Dinosaur Fossils!
+Use modeling clay and some plastic dinosaurs to create dinosaur fossils. Made this last
+night to test it out. Turned out pretty cool. Trying to see if this would work for a kids event
+at work. I think it will! You only need 1 oz. of modeling clay per fossil.
+      </p>
+    </div>
+    <div class="column" style="background-color: #e9fbe8; padding: 2rem; border-radius: .75rem; margin: 1rem;">
+      <h3 class="title is-5 has-text-centered">Example of corresponding GID</h3>
+      <hr style="border: 0; height: 2px; background: #333; margin: 1.5rem 0;">
+      <p>
+For a future birthday party – fairy party favors. But I want to figure out a different fairy, not
+Disney...<b>9659875b92ba8fa639ba476aedbb73b9.jpg</b> 300×300 pixels
+A quick, easy project for the kids: playful, pom-pom covered trees.
+Carrot and Apple Cinnamon Streusel Muffins | a cup of mascarpone
+Strawberry Banana Muffins recipe
+PaperVine: Got Kids? Make your own Dinosaur Fossils!
+Use modeling clay and some plastic dinosaurs to create dinosaur fossils. Made this last
+night to test it out. Turned out pretty cool. Trying to see if this would work for a kids event
+at work. I think it will! You only need 1 oz. of modeling clay per fossil.
+      </p>
+    </div>
+  </div>
+</div>
+<br><br>
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        
+        <h2 class="title is-3">DP Auditing with NIDs</h2>
+        <div class="content has-text-justified">
+
+      <figure style="margin: 0 auto; width: 88%;">
+          <img src="static/images/schema_iclrpptx.gif" alt="DP Auditing with NIDs" style="display: block; width: 100%; height: auto;"/>
+          <figcaption style="margin-top: 8px; font-size: 0.8em; text-align: justify;">Figure 1: Illustration of DP auditing with NIDs as natural canaries. The approach enables privacy estimation without retraining, leveraging NIDs and generated GIDs for greater statistical power.</figcaption>
+
+        </figure> 
+          <br><br>
+          <p>
+            DP auditing aims to empirically estimate the <strong>privacy budget</strong> ($\varepsilon$) of a model.
+            Traditional DP auditing requires training at least one <strong>additional model</strong>.
+            This is <strong>prohibitively expensive</strong> for LLMs. In contrast, we treat the NIDs present in the training data as <strong>natural canaries</strong>, making this effectively a <strong>zero-run DP auditing</strong> workflow for the auditor.
+          </p>
+          <div class="container is-max-desktop" style="max-width: 1150px;">
+            <div class="columns is-centered is-vcentered" style="margin-bottom: 0;">
+              <div class="column is-half has-text-centered" style="padding: 0 0.5rem;">
+                <figure class="image" style="margin-bottom: 6px;">
+                  <img src="static/images/1b.png" alt="Chart showing estimated varepsilon for Pythia-1b" style="width: 100%; max-width:500px; display: inline-block;">
+                  <figcaption style="margin-top: 8px; font-size: 0.8em;">(a) Pythia-1b</figcaption>
+                </figure>
+              </div>
+              <div class="column is-half has-text-centered" style="padding: 0 0.5rem;">
+                <figure class="image" style="margin-bottom: 6px;">
+                  <img src="static/images/410m.png" alt="Chart showing estimated varepsilon for Pythia-410m" style="width: 100%; max-width:500px; display: inline-block;">
+                  <figcaption style="margin-top: 8px; font-size: 0.8em;">(b) Pythia-410m</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div style="margin-top: 8px; font-size: 0.8em; text-align: justify;">
+              Figure 2: Estimated privacy parameter ($\varepsilon$) for Pythia-1b and Pythia-410m using DP auditing with NIDs. Increasing the canary set cardinality using NIDs enables sharper privacy bounds with fewer canaries.
+            </div>
+          </div>
+          <br><br>
+          <p>
+            Our approach fundamentally improves upon the standard DP auditing framework. Firstly, with our framework, we can perform DP auditing <strong>post-hoc</strong>, without the necessity of <strong>retraining</strong> the model.
+            Secondly, with our framework, we can leverage NIDs to increase the cardinality of the canary set, making the task of guessing the correct canary much harder.
+            Particularly, the standard binary formulation relies on an "in or out" canary game, effectively a cardinality of $c=2$. Because guessing the correct canary out of two has a 50% random probability, an auditor needs thousands of samples to confidently establish a tight lower bound for the privacy parameter $\varepsilon$.<br><br>
+            By leveraging NIDs, we can expand to a higher cardinality, e.g., $c=32$ (one NID and 31 GIDs). Guessing the correct identifier among 32 choices is much harder and, as shown in Figure 2, yields <strong>tighter estimates</strong> with fewer canaries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<br><br>
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Inference with NIDs</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Dataset Inference (DI)</strong> aims to determine whether a specific dataset was utilized during pretraining.
+            Our framework solves the major bottleneck of DI: the lack of an <strong>IID held-out set</strong> that follows exactly the same distribution as the training set.
+            By using NIDs from the suspect dataset and generating corresponding GIDs, we can post-hoc construct both the suspect set and the held-out set with the <strong>same distribution</strong>.
+          </p>
+          <p>
+            To show the effectiveness of our framework, we conduct a thorough audit on the <strong>open-source</strong> OLMo and Pythia models.
+            We successfully demonstrate that our framework can conduct DI with <strong>perfect IID held-out sets</strong>, making dataset inference scalable and practical for existing Foundation Models.
+            As shown in the Table 1, our framework can successfully detect the dataset membership for all the models and datasets.
+            <br><br>
+            A natural question concerns the behavior of our approach on smaller, task-specific datasets.
+            We addressed this by successfully performing task-specific DI on the <strong>GSM8K</strong> dataset by perturbing names and numerical values while maintaining syntactic structure.
+            This means that our framework is not only applicable to large, general datasets, but also to much smaller, specific datasets.
+            Therefore, we can use our method to statistically prove <strong>dataset contamination</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+
+
+<style>
+    .pile-table {
+        border-collapse: collapse;
+        font-family: serif;
+        width: 80%;
+        margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .pile-table th, .pile-table td {
+        padding: 3px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    .pile-table thead th {
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+    }
+    .pile-table tfoot td {
+        border-top: 1px solid black;
+        text-align: left;
+        font-size: 0.9em;
+    }
+    .tick {
+        color: #28a745; /* Green color */
+        font-weight: bold;
+        margin-left: 2px;
+    }
+    .caption {
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+</style>
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+            <p style="font-size: 0.8em;">
+            <strong>Table 1: P-values for DI on the Pile Dataset with 100 suspect samples.</strong> 
+            <span style="font-weight: normal;">
+                We use a 0.01 p-value threshold. We reject the null for all training subsets (<em>p</em> &le; 0.01) 
+                and do not reject it for the test set (<em>p</em> &gt; 0.01). All outcomes are correct 
+                (<span class="tick">&check;</span>).
+            </span>
+            </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<table class="pile-table" style="width: 65%; margin-left: auto; margin-right: auto;">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>GH</th>
+            <th>SE</th>
+            <th>HN</th>
+            <th>CC</th>
+            <th>AX</th>
+            <th>PM</th>
+            <th>IRC</th>
+            <th>Full</th>
+            <th>GH (Test)</th>
+            <th>Full (Test)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Pythia 12B</td>
+            <td>0.0031 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.8182 <span class="tick">&check;</span></td>
+            <td>0.2847 <span class="tick">&check;</span></td>
+        </tr>
+        <tr>
+            <td>Pythia 6.9B</td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0002 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.6139 <span class="tick">&check;</span></td>
+            <td>0.0811 <span class="tick">&check;</span></td>
+        </tr>
+        <tr>
+            <td>Pythia 2.8B</td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.0001 <span class="tick">&check;</span></td>
+            <td>0.9632 <span class="tick">&check;</span></td>
+            <td>0.0660 <span class="tick">&check;</span></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="11">Notation: GH = GitHub, SE = StackExchange, HN = HackerNews, CC = Pile-CC, AX = ArXiv, PM = PubMedCentral, IRC = UbuntuIRC</td>
+        </tr>
+    </tfoot>
+</table>
+<br><br>
+
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Conclusions</h2>
+        <div class="content has-text-justified">
+          <p>
+            Natural Identifiers make <strong>post-hoc auditing</strong> of pretrained LLMs practical. The same NID/GID framework supports both privacy and data provenance checks on already-trained models.
+          </p>
+          <ol>
+            <li><strong>DP auditing:</strong> use NIDs as natural canaries and GIDs to tighten \(\varepsilon\) estimates without retraining.</li>
+            <li><strong>Dataset inference:</strong> perform same-distribution NID/GID comparisons without requiring private non-member held-out data.</li>
+          </ol>
+          <p>
+            Because NIDs are <strong>widespread</strong> across real corpora, this approach is broadly applicable in practice. In short, NIDs and matched GIDs provide an <strong>efficient</strong>, <strong>scalable</strong>, and <strong>statistically grounded</strong> path to audit existing models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <a href="https://openreview.net/pdf?id=doaAUf9Pi7" target="_blank" class="button is-primary is-medium">Read the full paper</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{rossi2026natural,
+  title={Natural Identifiers for Privacy and Data Audits in Large Language Models},
+  author={Lorenzo Rossi and Bart{\l}omiej Marek and Franziska Boenisch and Adam Dziedzic},
+  booktitle={The Fourteenth International Conference on Learning Representations},
+  year={2026},
+  url={https://openreview.net/forum?id=doaAUf9Pi7}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
